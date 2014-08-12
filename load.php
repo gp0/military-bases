@@ -12,9 +12,12 @@ foreach ($data as $record => $item) {
 	if ($item['start'] == 0) {
 		$data[$record]["options"]["infoUrl"] = "ajax/infoContribute.php?id=".$item['id']."&incomplete=1";
 		$data[$record]["options"]["theme"] = "red";
+
+		$data[$record]["options"]["complete"] = false;
 	} else {
 		$data[$record]["options"]["infoUrl"] = "ajax/infoContribute.php?id=".$item['id']."&incomplete=0";
 		$data[$record]["options"]["theme"] = "green";
+		$data[$record]["options"]["complete"] = true;
 	}
 
 

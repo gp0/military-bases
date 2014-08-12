@@ -1,4 +1,6 @@
 <?
+ob_start('ob_gzhandler');
+
 if (isset($_GET['id'])) {
 
 	require_once '../inc/lib/medoo.min.php';

@@ -1,3 +1,5 @@
+// Set up map and timeline
+
 var tm;
 $(function() {
     
@@ -7,13 +9,15 @@ $(function() {
     ], {
         name: "white"
     });
-    
+
+
     tm = TimeMap.init({
         mapId: "map",               // Id of map div element (required)
         timelineId: "timeline",     // Id of timeline div element (required)
         options: {
             eventIconPath: "images/",
             mapTypeId: google.maps.MapTypeId.HYBRID
+
 
         },
         datasets: [
@@ -29,6 +33,7 @@ $(function() {
             Timeline.DateTime.DECADE, 
             Timeline.DateTime.CENTURY
         ]
+
     });
     
     // set the map to our custom style
@@ -37,6 +42,9 @@ $(function() {
     //gmap.setMapTypeId("white");
 
     var map = tm.getNativeMap();
+
     map.setOptions({scrollwheel:true});
 
+
+    //$(".timeline-band-layer-inner").css("top", "160px");
 });

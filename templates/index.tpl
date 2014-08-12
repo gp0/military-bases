@@ -32,10 +32,12 @@
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   
 <script type="text/javascript" src="js/lib/timemap/lib/mxn/mxn.js?(googlev3)"></script>
-<script type="text/javascript" src="js/lib/timemap/lib/timeline-1.2.js"></script>
+<script type="text/javascript" src="js/lib/timemap/lib/timeline-2.3.0.js"></script>
 <script src="js/lib/timemap/src/timemap.js"></script>
 <script src="js/lib/timemap/src/loaders/json.js" type="text/javascript"></script>
 <script src="js/map.js"></script>
+<script src="js/menu.js"></script>
+
 <script src="js/contribute.js"></script>
   </head>
 
@@ -52,23 +54,11 @@
           </button>
           <a class="navbar-brand" href="#">US BASES</a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="?action=map">Map</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+       <? require_once('templates/menu.tpl'); ?>
       </div>
     </div>
  
 
-    	<? include("inc/".$content.".inc.php"); ?>
-<!-- /.container -->
-    
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-
+    	<? require_once("inc/".$content.".inc.php"); ?>
   </body>
 </html>
