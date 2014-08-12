@@ -8,6 +8,8 @@ if (isset($_GET['id'])) {
 
 	$base = $db->get("bases", ["name", "start", "end", "source"], ["id" => $id]);
 
+	$base['searchTerms'] = str_replace(' ', '+', $base["name"]);
+
 	if ($_GET['incomplete']) {
 		require_once("../templates/ajax/contribute.tpl");
 	} else {

@@ -8,6 +8,6 @@ if (isset($_POST)) {
 
 	$db->update("bases", $_POST, ["id" => $id]);
 
-	echo "success";	
+	require_once '../templates/ajax/success.tpl';
 }
 ?>

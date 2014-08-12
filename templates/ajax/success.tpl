@@ -1,0 +1,1 @@
+<div class="alert alert-success" role="alert"><strong>Thanks!</strong> Your input will be added soon.</div>

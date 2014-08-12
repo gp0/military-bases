@@ -3,7 +3,7 @@ $(function() {
 		e.preventDefault();
 		if ( $(this).parsley('validate') ) {
 	  		$.post("ajax/contribute.php", $(this).serialize(), function(data) {
-	  			alert(data);
+	  			$("#contribute").html(data);
 	  		});
 	  	}
 	});
