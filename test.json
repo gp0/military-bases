@@ -1,0 +1,31 @@
+[
+  {
+    "point": {"lon": 7.459717, "lat": 9.053277},
+    "title": "Nigeria",
+    "start": "2008-06-01",
+    "options": {
+      "theme": "TimeMapDataset.blueTheme()",
+      "description": "A protest over the price of water in Abuja results in violence."
+    }
+  },
+
+  {
+    "point": {"lon": 91.274414, "lat": 29.439598},
+    "title": "Tibet",
+    "start": "2008-07-15",
+    "options": {
+      "theme": "TimeMapDataset.redTheme()",
+      "description": "China launcheds a political crackdown in Tibet."
+    }
+  },
+
+  {
+    "point": {"lon": 71.474991, "lat": 34.163807},
+    "title": "Pakistan",
+    "start": "2008-10-19",
+    "options": {
+      "theme": "TimeMapDataset.blueTheme()",
+      "description": "The Taliban threaten to blow up Warsak Dam."
+    }
+  }
+]
