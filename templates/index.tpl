@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">US BASES</a>
+          <a class="navbar-brand" href="#"><img id="logo" src="images/logo.png"></a>
         </div>
        <? require_once('templates/menu.tpl'); ?>
       </div>
