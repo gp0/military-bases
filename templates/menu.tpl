@@ -19,4 +19,5 @@
       </ul>
     </li>
   </ul>
+  <h1 id="currentYear" class="pull-right">1950</h1>
 </div><!--/.nav-collapse -->

@@ -14,6 +14,8 @@ $(function() {
     tm = TimeMap.init({
         mapId: "map",               // Id of map div element (required)
         timelineId: "timeline",     // Id of timeline div element (required)
+        scrollTo: "earliest",
+        syncBands: false,
         options: {
             eventIconPath: "images/",
             mapTypeId: google.maps.MapTypeId.HYBRID
@@ -31,7 +33,7 @@ $(function() {
         ],
         bandIntervals: [
             Timeline.DateTime.DECADE, 
-            Timeline.DateTime.CENTURY
+            Timeline.DateTime.DECADE
         ]
 
     });
@@ -43,8 +45,21 @@ $(function() {
 
     var map = tm.getNativeMap();
 
+    console.log(tm.timeline);
+
     map.setOptions({scrollwheel:true});
 
+    $( "#slider" ).slider({
+      value:1903,
+      min: 1903,
+      max: 2050,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#currentYear" ).text(ui.value );
+        d = new Date(ui.value, 0 ,0);
 
-    //$(".timeline-band-layer-inner").css("top", "160px");
+        tm.scrollToDate(d.toISOString(), false, false);
+      }
+    });
+
 });

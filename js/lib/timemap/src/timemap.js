@@ -575,6 +575,7 @@ TimeMap.prototype = {
             x, time, layouts = [],
             band, minTime, maxTime;
         d = this.parseDate(d);
+        console.log(d);
         if (d) {
             time = d.getTime();
             // check which bands will need layout after scroll
@@ -589,12 +590,12 @@ TimeMap.prototype = {
                 // create animation
                 var provider = util.TimelineVersion() == '1.2' ? Timeline : SimileAjax,
                     a = provider.Graphics.createAnimation(function(abs, diff) {
-                        topband.setCenterVisibleDate(new Date(abs));
-                    }, topband.getCenterVisibleDate().getTime(), time, 1000);
+                        topband.setMaxVisibleDate(new Date(abs));
+                    }, topband.setMaxVisibleDate().getTime(), time, 1000);
                 a.run();
             }
             else {
-                topband.setCenterVisibleDate(d);
+                topband.setMaxVisibleDate(d);
             }
             // layout as necessary
             for (x=0; x < layouts.length; x++) {

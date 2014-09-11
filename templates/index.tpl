@@ -17,7 +17,8 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
   <link rel="stylesheet" type="text/css" href="css/map.css">
-
+  <link rel="stylesheet" type="text/css" href="css/jquery.time-slider.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.1/themes/ui-lightness/jquery-ui.css">
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
@@ -35,6 +36,8 @@
 <script type="text/javascript" src="js/lib/timemap/lib/timeline-2.3.0.js"></script>
 <script src="js/lib/timemap/src/timemap.js"></script>
 <script src="js/lib/timemap/src/loaders/json.js" type="text/javascript"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
 <script src="js/map.js"></script>
 <script src="js/menu.js"></script>
 
@@ -53,8 +56,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><img id="logo" src="images/logo.png"></a>
+           
         </div>
        <? require_once('templates/menu.tpl'); ?>
+      
       </div>
     </div>
  
