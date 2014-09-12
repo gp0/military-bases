@@ -575,7 +575,7 @@ TimeMap.prototype = {
             x, time, layouts = [],
             band, minTime, maxTime;
         d = this.parseDate(d);
-        console.log(d);
+
         if (d) {
             time = d.getTime();
             // check which bands will need layout after scroll

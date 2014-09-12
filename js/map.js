@@ -45,8 +45,6 @@ $(function() {
 
     var map = tm.getNativeMap();
 
-    console.log(tm.timeline);
-
     map.setOptions({scrollwheel:true});
 
     $( "#slider" ).slider({
@@ -61,5 +59,16 @@ $(function() {
         tm.scrollToDate(d.toISOString(), false, false);
       }
     });
+
+    //add popover to slider
+    $('.ui-slider-handle').attr('data-toggle', 'popover');
+    $('.ui-slider-handle').attr('data-container', 'body');
+    $('.ui-slider-handle').attr('data-placement', 'right');
+    $('.ui-slider-handle').attr('data-content', 'Drag me!');
+
+    $('.ui-slider-handle').popover({trigger:'manual'});
+    $('.ui-slider-handle').popover('show');
+    $('.ui-slider-handle').on('mousedown',function(){$(this).popover('destroy');});
+
 
 });
